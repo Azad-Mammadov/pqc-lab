@@ -1,5 +1,8 @@
 export module employee;
-import std;
+//import std;
+#include <string>
+#include <iostream>
+
 namespace Records 
 {
     const int DefaultStartingSalary {30000};
@@ -25,36 +28,30 @@ namespace Records
             void setLastName(const std::string& lastName);
             const std::string& getLastName() const;
 
+            void setEmployeeNumber(int newEmployeeNumber);
+            int getEmployeeNumber() const;
+
             void setSalary(int newSalary);
             int getSalary() const;
-    }
 
+            bool isHired() const;
+
+        private:
+            std::string m_firstName;
+            std::string m_lastName;
+            int m_employeeNumber{-1};
+            int m_salary{DefaultStartingSalary};
+
+            void setSalary(int newSalary);
+            int getSalary() const;
+
+            bool isHired() const;
+
+        private:
+            std::string m_firstName;
+            std::string m_lastName;
+            int m_employeeNumber{-1};
+            int m_salary{DefaultStartingSalary};
+            bool m_hired{false};
     };
-    
- Employee
- {
-
-
- }: Employee
- {
-
-
- }(/* args */)
-    {
-    }
-    
- Employee
- {
-
-
- }:: Employee
- {
-
-
- }()
-    {
-    }
-    
-
-
-}
+} // namespace Records
