@@ -41,17 +41,6 @@ namespace Records
             std::string m_lastName;
             int m_employeeNumber{-1};
             int m_salary{DefaultStartingSalary};
-
-            void setSalary(int newSalary);
-            int getSalary() const;
-
-            bool isHired() const;
-
-        private:
-            std::string m_firstName;
-            std::string m_lastName;
-            int m_employeeNumber{-1};
-            int m_salary{DefaultStartingSalary};
             bool m_hired{false};
     };
 } // namespace Records
