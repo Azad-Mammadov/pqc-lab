@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "EmployeeRecSystem.dir\\Debug\\/Employee.cppm.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\EmployeeRecSystem.dir\\Debug\\vc143.pdb",
+                "EmployeeRecSystem.dir\\Debug\\",
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\EmployeeRecSystem.dir\\Debug\\Employee.cppm.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "employee",
+                    "source-path": "c:\\users\\azadmammadov\\documents\\github\\pqc-lab\\experiments\\employee_recsystem\\employee.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

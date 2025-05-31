@@ -1,7 +1,8 @@
-export module employee;
-//import std;
+module;
 #include <string>
 #include <iostream>
+export module employee;
+
 
 namespace Records 
 {
@@ -28,7 +29,7 @@ namespace Records
             void setLastName(const std::string& lastName);
             const std::string& getLastName() const;
 
-            void setEmployeeNumber(int newEmployeeNumber);
+            void setEmployeeNumber(int mployeeNumber);
             int getEmployeeNumber() const;
 
             void setSalary(int newSalary);
