@@ -1,41 +1,54 @@
 import database;
 #include <iostream>
 #include <string>
+#include <stdexcept>
 
 using namespace std;
 using namespace Records;
 
 int main()
 {
-    // Create a Database object
-    Database myDB;
-    // Add an employee to the database and assign a reference to emp1
-    Employee& emp1 {myDB.addEmployee("Greg", "Wallis")};
-    // Fire the employee
-    emp1.fire();
+    try {
+        // Create a Database object
+        Database myDB;
 
-    // Add an employee to the database and assign a reference to emp2
-    Emplotee& emp2 {myDB.addEmployee("Marc", "White")};
-    // Set the salary of the employee
-    emp2.setSalary(100000);
+        // Add employees with error checking
+        Employee& emp1 = myDB.addEmployee("Greg", "Wallis");
+        if (!emp1.getEmployeeNumber()) {
+            throw runtime_error("Failed to add employee Greg Wallis");
+        }
+        emp1.fire();
 
-    // Add an employee to the database and assign a reference to emp3
-    Employee& emp3 {myDB.addEmployee("John", "Doe")};
-    // Set the salary of the employee
-    emp3.setSalary(10000);
-    // Promote the employee
-    emp3.promote();
+        Employee& emp2 = myDB.addEmployee("Marc", "White");
+        if (!emp2.getEmployeeNumber()) {
+            throw runtime_error("Failed to add employee Marc White");
+        }
+        emp2.setSalary(100000);
 
-    // Display all employees in the database
-    std::cout << "All Employees:\n===================";
-    myDB.displayAll();
+        Employee& emp3 = myDB.addEmployee("John", "Doe");
+        if (!emp3.getEmployeeNumber()) {
+            throw runtime_error("Failed to add employee John Doe");
+        }
+        emp3.setSalary(10000);
+        emp3.promote();
 
-    // Display current employees in the database
-    std::cout << "\nCurrent Employees:\n===================";
-    myDB.displayCurrent();
+        // Display all employees with headers
+        cout << "\nAll Employees:" << endl;
+        cout << "===================" << endl;
+        myDB.displayAll();
 
-    // Display former employees in the database
-    std::cout << "\nFormer Employees:\n===================";
-    myDB.displayFormer();
-    return 0;
+        cout << "\nCurrent Employees:" << endl;
+        cout << "===================" << endl;
+        myDB.displayCurrent();
+
+        cout << "\nFormer Employees:" << endl;
+        cout << "===================" << endl;
+        myDB.displayFormer();
+
+        return 0;
+    }
+    catch (const exception& e) {
+        cerr << "Error: " << e.what() << endl;
+        return 1;
+    }
 }

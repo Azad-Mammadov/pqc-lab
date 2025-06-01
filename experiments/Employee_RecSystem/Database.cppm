@@ -1,7 +1,9 @@
-export module database;
+module;
 #include <iostream>
 #include <string>
 #include <vector>
+
+export module database;
 
 import employee;
 
@@ -34,3 +36,4 @@ namespace Records
             int m_nextEmployeeNumber {FirstEmployeeNumber};     
     };
 }
+

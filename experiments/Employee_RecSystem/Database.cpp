@@ -1,6 +1,9 @@
-module database;
+module;
 #include <iostream>
 #include <string>
+#include <stdexcept>
+
+module database;
 
 using namespace std;
 
