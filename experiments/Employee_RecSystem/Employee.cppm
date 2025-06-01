@@ -1,7 +1,10 @@
-module;
 #include <string>
 #include <iostream>
+
+module;
 export module employee;
+
+
 
 
 namespace Records 

@@ -1,55 +1,47 @@
-cmake_minimum_required(VERSION 3.26)
+cmake_minimum_required(VERSION 3.27)
+project(EmployeeRecSystem LANGUAGES CXX)
 
-# Force Clang compiler before project declaration
-set(CMAKE_CXX_COMPILER "C:/clang/clang+llvm-20.1.6-x86_64-pc-windows-msvc/bin/clang++.exe" 
-    CACHE STRING "Clang compiler path" FORCE)
-
-# Project settings
-project(EmployeeRecSystem VERSION 1.0 LANGUAGES CXX)
-
-# C++20 settings
+# Set C++20 standard
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Create module cache directory
-file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/pcm)
+# Enable modules support
+set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API ON)
+set(CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP ON)
 
-# Set module compilation flags directly
-add_compile_options(
-    -fmodules
-    -fbuiltin-module-map
-    -fimplicit-module-maps
-    -fmodules-cache-path=${CMAKE_BINARY_DIR}/pcm
+# Employee module
+add_library(employee_module
+  Employee.cpp
 )
-
-# Define module interfaces
-add_library(employee_module OBJECT Employee.cppm)
-target_compile_options(employee_module PRIVATE
-    -fmodule-name=employee
+target_sources(employee_module
+  PRIVATE
+    FILE_SET cxx_modules TYPE CXX_MODULES FILES
+      Employee.cppm
 )
+target_compile_features(employee_module PRIVATE cxx_std_20)
 
-add_library(database_module OBJECT Database.cppm)
-target_compile_options(database_module PRIVATE
-    -fmodule-name=database
+# Database module
+add_library(database_module
+  Database.cpp
 )
-
-# Set properties for both modules
-foreach(module employee_module database_module)
-    set_target_properties(${module} PROPERTIES
-        CXX_STANDARD 20
-        CXX_STANDARD_REQUIRED ON
-        POSITION_INDEPENDENT_CODE ON
-    )
-endforeach()
-
-# Main executable
-add_executable(EmployeeRecSystem
-    Employee.cpp
-    Database.cpp
-    DatabaseTest.cpp
+target_sources(database_module
+  PRIVATE
+    FILE_SET cxx_modules TYPE CXX_MODULES FILES
+      Database.cppm
 )
+target_link_libraries(database_module
+  PRIVATE
+    employee_module
+)
+target_compile_features(database_module PRIVATE cxx_std_20)
 
-# Add module dependencies
-add_dependencies(EmployeeRecSystem employee_module database_module)
-target_link_libraries(EmployeeRecSystem PRIVATE employee_module database_module)
+# Executable
+add_executable(database_test
+  DatabaseTest.cpp
+)
+target_link_libraries(database_test
+  PRIVATE
+    database_module
+)
+target_compile_features(database_test PRIVATE cxx_std_20)

@@ -1,8 +1,12 @@
-module;
 #include <iostream>
 #include <string>
+module;
+//module employee;
+import employee;
 
-module employee;
+
+
+
 
 using namespace std;
 

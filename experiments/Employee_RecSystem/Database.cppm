@@ -1,11 +1,12 @@
-module;
 #include <iostream>
 #include <string>
 #include <vector>
 
+module;
 export module database;
-
 import employee;
+
+
 
 namespace Records 
 {
