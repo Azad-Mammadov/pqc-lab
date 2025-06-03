@@ -1,31 +1,38 @@
 cmake_minimum_required(VERSION 3.27)
 project(EmployeeRecSystem LANGUAGES CXX)
 
-# Enable C++20 modules support
+# Enable C++20 modules support with experimental features
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-# Enable experimental modules support for MSVC
+# Enable experimental MSVC modules
 set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API "2182bf5c-ef0d-489a-91da-49dbc3090d2a")
 set(CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP 1)
+set(CMAKE_CXX_SCAN_FOR_MODULES ON)
 
-# Path to your precompiled std modules interface files (.ifc)
-set(STD_IFC_PATH "${CMAKE_BINARY_DIR}/ifc")
+# Set paths for module interfaces
+set(MSVC_MODULE_DIR "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/modules")
+set(MODULE_OUTPUT_DIR "${CMAKE_BINARY_DIR}/modules")
 
-# Create IFC output directory
-file(MAKE_DIRECTORY ${STD_IFC_PATH})
+# Create module directories
+file(MAKE_DIRECTORY "${MODULE_OUTPUT_DIR}")
 
 # === EMPLOYEE MODULE ===
 add_library(employee_module)
 target_sources(employee_module
     PUBLIC
-        FILE_SET CXX_MODULES FILES
-        Employee.cppm
+        FILE_SET CXX_MODULES 
+        BASE_DIRS "${CMAKE_CURRENT_SOURCE_DIR}"
+        FILES Employee.cppm
     PRIVATE
         Employee.cpp
 )
-target_compile_features(employee_module PRIVATE cxx_std_20)
+target_include_directories(employee_module
+    PUBLIC
+        "${MSVC_MODULE_DIR}"
+)
+target_compile_features(employee_module PUBLIC cxx_std_20)
 set_target_properties(employee_module PROPERTIES
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
 )
