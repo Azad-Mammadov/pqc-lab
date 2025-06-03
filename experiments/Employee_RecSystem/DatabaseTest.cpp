@@ -1,7 +1,8 @@
+// #include <iostream>
+// #include <string>
+// #include <stdexcept>
 import database;
-#include <iostream>
-#include <string>
-#include <stdexcept>
+
 
 using namespace std;
 using namespace Records;

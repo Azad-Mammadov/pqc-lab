@@ -1,10 +1,13 @@
-#include <string>
-#include <iostream>
+//module;
 
-module;
 export module employee;
 
+import std.string;
+import std.iostream;
+import std.vector;
+import std.stdexcept;
 
+//import std;
 
 
 namespace Records 

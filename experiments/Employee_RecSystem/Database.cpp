@@ -1,12 +1,11 @@
-#include <iostream>
-#include <string>
-#include <stdexcept>
+//module;
 
-module;
-//module database;
-import database;
+module database;
+//import database;
 
-
+// #include <iostream>
+// #include <string>
+// #include <stdexcept>
 
 
 using namespace std;
@@ -19,7 +18,7 @@ namespace Records
         // Create a new employee object with the given first and last name
         Employee theEmployee {firstName, lastName};
         // Set the employee number to the next available number
-        theEmployee.setEployeeNumber(m_nextEmployeeNumber++);
+        theEmployee.setEmployeeNumber(m_nextEmployeeNumber++);
         // Hire the employee
         theEmployee.hire();
         // Add the employee to the list of employees

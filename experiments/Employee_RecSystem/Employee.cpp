@@ -1,10 +1,9 @@
-#include <iostream>
-#include <string>
-module;
-//module employee;
-import employee;
+//module;
+
+module employee;
 
 
+//import employee;
 
 
 
@@ -15,7 +14,7 @@ namespace Records
     Employee::Employee(const std::string& firstName, const std::string& lastName)
         : m_firstName(firstName), m_lastName(lastName) {}
 
-    void Employee::promote(int raiseAmount)
+        void Employee::promote(int raiseAmount)
     {
         setSalary(getSalary() + raiseAmount);
     }
