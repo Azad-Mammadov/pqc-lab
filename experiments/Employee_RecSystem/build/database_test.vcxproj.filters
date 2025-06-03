@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\Employee_RecSystem\DatabaseTest.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\Employee_RecSystem\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{282521CB-16BA-3FAB-83D5-D0D2869CB827}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

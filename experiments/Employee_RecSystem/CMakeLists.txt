@@ -1,76 +1,54 @@
 cmake_minimum_required(VERSION 3.27)
-#set(CMAKE_CXX_SCAN_FOR_MODULES OFF)
 project(EmployeeRecSystem LANGUAGES CXX)
 
-set(CMAKE_CXX_SCAN_FOR_MODULES OFF CACHE BOOL "Disable module scanning" FORCE)
-
-set(CMAKE_CXX_STANDARD 23)
+# Enable C++20 modules support
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 
-       #set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API ON)
-       #set(CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP ON)
+# Enable experimental modules support for MSVC
+set(CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API "2182bf5c-ef0d-489a-91da-49dbc3090d2a")
+set(CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP 1)
 
 # Path to your precompiled std modules interface files (.ifc)
-set(STD_IFC_PATH "C:/stdmodules")
+set(STD_IFC_PATH "${CMAKE_BINARY_DIR}/ifc")
 
-# If using Clang on Windows (custom path)
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
-    # Override compiler path to your specific clang-cl.exe
-    # Adjust this path if your clang executable is named differently or located elsewhere
-    set(CMAKE_CXX_COMPILER "C:/clang/clang+llvm-20.1.6-x86_64-pc-windows-msvc/bin/clang-cl.exe" CACHE STRING "" FORCE)
-
-    # Clang flags to search for module interfaces (example)
-    # Clang uses -fmodule-map-file= and -fprebuilt-module-path= but MSVC modules are different,
-    # so you might need to experiment or adapt.
-    # Here's an example to add the std module search path:
-    add_compile_options(
-        -fprebuilt-module-path=${STD_IFC_PATH}
-        -fmodules-ts
-    )
-endif()
+# Create IFC output directory
+file(MAKE_DIRECTORY ${STD_IFC_PATH})
 
 # === EMPLOYEE MODULE ===
-add_library(employee_module
-  Employee.cpp
-)
+add_library(employee_module)
 target_sources(employee_module
-  PRIVATE
-    FILE_SET cxx_modules TYPE CXX_MODULES FILES
-      Employee.cppm
+    PUBLIC
+        FILE_SET CXX_MODULES FILES
+        Employee.cppm
+    PRIVATE
+        Employee.cpp
 )
 target_compile_features(employee_module PRIVATE cxx_std_20)
-
-target_compile_options(employee_module PRIVATE
-  $<$<CXX_COMPILER_ID:MSVC>:/ifcSearchDir${STD_IFC_PATH}>
-  $<$<CXX_COMPILER_ID:Clang>:-fprebuilt-module-path=${STD_IFC_PATH} -fmodules-ts>
+set_target_properties(employee_module PROPERTIES
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
 )
 
 # === DATABASE MODULE ===
-add_library(database_module
-  Database.cpp
-)
+add_library(database_module)
 target_sources(database_module
-  PRIVATE
-    FILE_SET cxx_modules TYPE CXX_MODULES FILES
-      Database.cppm
+    PUBLIC
+        FILE_SET CXX_MODULES FILES
+        Database.cppm
+    PRIVATE
+        Database.cpp
 )
 target_link_libraries(database_module PRIVATE employee_module)
 target_compile_features(database_module PRIVATE cxx_std_20)
-
-target_compile_options(database_module PRIVATE
-  $<$<CXX_COMPILER_ID:MSVC>:/ifcSearchDir${STD_IFC_PATH}>
-  $<$<CXX_COMPILER_ID:Clang>:-fprebuilt-module-path=${STD_IFC_PATH} -fmodules-ts>
+set_target_properties(database_module PROPERTIES
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
 )
 
 # === EXECUTABLE ===
-add_executable(database_test
-  DatabaseTest.cpp
-)
+add_executable(database_test DatabaseTest.cpp)
 target_link_libraries(database_test PRIVATE database_module)
 target_compile_features(database_test PRIVATE cxx_std_20)
-
-target_compile_options(database_test PRIVATE
-  $<$<CXX_COMPILER_ID:MSVC>:/ifcSearchDir${STD_IFC_PATH}>
-  $<$<CXX_COMPILER_ID:Clang>:-fprebuilt-module-path=${STD_IFC_PATH} -fmodules-ts>
+set_target_properties(database_test PROPERTIES
+    MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
 )
