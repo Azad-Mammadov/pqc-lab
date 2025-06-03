@@ -25,7 +25,7 @@ file(GLOB STD_MODULES "${MSVC_MODULE_DIR}/*.ixx")
 file(COPY ${STD_MODULES} DESTINATION "${CMAKE_CXX_STANDARD_MODULES_DIR}")
 
 # Enable standard modules globally
-add_compile_options(/experimental:module /std:c++20)
+add_compile_options(/experimental:module /std:c++20 /EHsc)
 
 # === EMPLOYEE MODULE ===
 add_library(employee_module)
@@ -42,6 +42,8 @@ set_target_properties(employee_module PROPERTIES
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
     VS_GLOBAL_EnableModules "true"
     VS_GLOBAL_StandardModules "std"
+    VS_GLOBAL_UseStandardPreprocessor "true"
+    WINDOWS_EXPORT_ALL_SYMBOLS ON
 )
 
 # === DATABASE MODULE ===
@@ -53,16 +55,15 @@ target_sources(database_module
     PRIVATE
         Database.cpp
 )
-target_link_libraries(database_module PRIVATE employee_module)
-target_compile_features(database_module PRIVATE cxx_std_20)
+target_link_libraries(database_module PUBLIC employee_module)
 set_target_properties(database_module PROPERTIES
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
+    WINDOWS_EXPORT_ALL_SYMBOLS ON
 )
 
 # === EXECUTABLE ===
 add_executable(database_test DatabaseTest.cpp)
 target_link_libraries(database_test PRIVATE database_module)
-target_compile_features(database_test PRIVATE cxx_std_20)
 set_target_properties(database_test PROPERTIES
     MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>DLL"
 )

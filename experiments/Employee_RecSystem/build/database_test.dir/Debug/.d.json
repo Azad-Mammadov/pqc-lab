@@ -1,0 +1,19 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\azadmammadov\\documents\\github\\pqc-lab\\experiments\\employee_recsystem\\databasetest.cpp",
+        "ProvidedModule": "",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "database",
+                "BMI": "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\database_module.dir\\Debug\\Database.cppm.ifc"
+            },
+            {
+                "Name": "employee",
+                "BMI": "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\employee_module.dir\\Debug\\Employee.cppm.ifc"
+            }
+        ],
+        "ImportedHeaderUnits": []
+    }
+}

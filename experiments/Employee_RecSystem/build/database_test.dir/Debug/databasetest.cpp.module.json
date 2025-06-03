@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "database_test.dir\\Debug\\DatabaseTest.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\database_test.dir\\Debug\\vc143.pdb",
+                "database_test.dir\\Debug\\"
+            ],
+            "requires": [
+                {
+                    "logical-name": "database"
+                }
+            ]
+        }
+    ]
+}

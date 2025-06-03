@@ -1,0 +1,26 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "database_module.dir\\Debug\\/Database.cppm.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\Debug\\database_module.pdb",
+                "database_module.dir\\Debug\\/Database.cppm.module.json",
+                "database_module.dir\\Debug\\/Database.cppm.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "database",
+                    "source-path": "c:\\users\\azadmammadov\\documents\\github\\pqc-lab\\experiments\\employee_recsystem\\database.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "employee"
+                }
+            ]
+        }
+    ]
+}

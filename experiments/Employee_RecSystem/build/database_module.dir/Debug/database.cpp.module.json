@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "database_module.dir\\Debug\\/Database.cpp.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\Debug\\database_module.pdb",
+                "database_module.dir\\Debug\\"
+            ],
+            "requires": [
+                {
+                    "logical-name": "database"
+                }
+            ]
+        }
+    ]
+}
