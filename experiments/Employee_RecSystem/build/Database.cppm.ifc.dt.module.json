@@ -1,0 +1,27 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Database.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\vc140.pdb",
+                "C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build\\Database.cppm.ifc.dt.module.json",
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\Database.cppm.ifc.dt.d.json",
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\database.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "database",
+                    "source-path": "c:\\users\\azadmammadov\\documents\\github\\pqc-lab\\experiments\\employee_recsystem\\database.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "employee"
+                }
+            ]
+        }
+    ]
+}
