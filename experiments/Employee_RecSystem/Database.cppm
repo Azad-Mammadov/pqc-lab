@@ -1,9 +1,11 @@
 //module;
 
+
+import std.string;
+import std.iostream;
+import std.vector;
 export module database;
-// #include <iostream>
-// #include <string>
-// #include <vector>
+
 import employee;
 
 
