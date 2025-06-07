@@ -19,6 +19,15 @@
             ],
             "requires": [
                 {
+                    "logical-name": "std.string"
+                },
+                {
+                    "logical-name": "std.iostream"
+                },
+                {
+                    "logical-name": "std.vector"
+                },
+                {
                     "logical-name": "employee"
                 }
             ]
