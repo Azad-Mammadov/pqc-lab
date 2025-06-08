@@ -1,5 +1,4 @@
-C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/employee_module.dir
-C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/database_module.dir
-C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/database_test.dir
+C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/DB_lib.dir
+C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/DB_test.dir
 C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/ALL_BUILD.dir
 C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/Employee_RecSystem/build/CMakeFiles/ZERO_CHECK.dir

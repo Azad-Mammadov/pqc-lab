@@ -1,5 +1,0 @@
-module employee {
-    header "Employee.cppm"
-    export *
-}
-

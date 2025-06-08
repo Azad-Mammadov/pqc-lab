@@ -1,0 +1,44 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "DB_lib.dir\\Debug\\/src/Database.cppm.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\Debug\\DB_lib.pdb",
+                "DB_lib.dir\\Debug\\",
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\DB_lib.dir\\Debug\\Database.cppm.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "database",
+                    "source-path": "c:\\users\\azadmammadov\\documents\\github\\pqc-lab\\experiments\\employee_recsystem\\src\\database.cppm",
+                    "is-interface": true
+                }
+            ],
+            "requires": [
+                {
+                    "logical-name": "employee"
+                },
+                {
+                    "logical-name": "string",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\string",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
+                },
+                {
+                    "logical-name": "iostream",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\iostream",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
+                },
+                {
+                    "logical-name": "vector",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\vector",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
+                }
+            ]
+        }
+    ]
+}

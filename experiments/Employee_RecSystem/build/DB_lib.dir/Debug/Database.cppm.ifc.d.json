@@ -1,0 +1,28 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "c:\\users\\azadmammadov\\documents\\github\\pqc-lab\\experiments\\employee_recsystem\\src\\database.cppm",
+        "ProvidedModule": "database",
+        "Includes": [],
+        "ImportedModules": [
+            {
+                "Name": "employee",
+                "BMI": "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\DB_lib.dir\\Debug\\Employee.cppm.ifc"
+            }
+        ],
+        "ImportedHeaderUnits": [
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\string",
+                "BMI": "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\DB_lib.dir\\Debug\\src\\string_ZMWW5NLIA4GNKJSU.ifc"
+            },
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\iostream",
+                "BMI": "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\DB_lib.dir\\Debug\\src\\iostream_6YTNORJJXX0QZ88Z.ifc"
+            },
+            {
+                "Header": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\vector",
+                "BMI": "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\Employee_RecSystem\\build\\DB_lib.dir\\Debug\\src\\vector_0A3HG0BMCA2LC5PP.ifc"
+            }
+        ]
+    }
+}

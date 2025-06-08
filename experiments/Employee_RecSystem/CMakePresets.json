@@ -1,28 +1,40 @@
 {
-  "version": 6,
-  "configurePresets": [
-    {
-      "name": "windows-msvc-debug",
-      "displayName": "Windows MSVC Debug",
-      "description": "Target Windows with MSVC compiler (Debug)",
-      "generator": "Visual Studio 17 2022",
-      "architecture": {
-        "value": "x64",
-        "strategy": "set"
-      },
-      "binaryDir": "${sourceDir}/build",
-      "cacheVariables": {
-        "CMAKE_BUILD_TYPE": "Debug",
-        "CMAKE_INSTALL_PREFIX": "${sourceDir}/install",
-        "CMAKE_CXX_COMPILER": "cl.exe"
-      }
-    }
-  ],
-  "buildPresets": [
-    {
-      "name": "windows-msvc-debug",
-      "configurePreset": "windows-msvc-debug",
-      "configuration": "Debug"
-    }
-  ]
+    "version": 6,
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 25,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "windows-default",
+            "displayName": "Windows x64 Debug",
+            "description": "Target Windows with the Visual Studio development environment.",
+            "generator": "Visual Studio 17 2022",
+            "binaryDir": "${sourceDir}/build",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "CMAKE_INSTALL_PREFIX": "${sourceDir}/install",
+                "CMAKE_C_COMPILER": "cl.exe",
+                "CMAKE_CXX_COMPILER": "cl.exe",
+                "CMAKE_CXX_STANDARD": "23",
+                "CMAKE_CXX_STANDARD_REQUIRED": "ON",
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+                "CMAKE_EXPERIMENTAL_CXX_MODULE_CMAKE_API": "2182bf5c-ef0d-489a-91da-49dbc3090d2a",
+                "CMAKE_EXPERIMENTAL_CXX_MODULE_DYNDEP": "1"
+            }
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "windows-default",
+            "configurePreset": "windows-default",
+            "configuration": "Debug",
+            "targets": ["bank_lib", "bank_test"]
+        }
+    ]
 }
