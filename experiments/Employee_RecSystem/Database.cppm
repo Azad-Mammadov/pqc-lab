@@ -1,14 +1,12 @@
 //module;
 
-
-import std.string;
-import std.iostream;
-import std.vector;
 export module database;
 
+import <string>;
+import <iostream>;
+import <vector>;
+
 import employee;
-
-
 
 
 namespace Records 
