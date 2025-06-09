@@ -3,7 +3,7 @@
 // import <iostream>;
 #include <iostream>
 #include <string>
-#include <array>
+#include <vector>
 import employee;
 
 using namespace std;
@@ -41,35 +41,35 @@ using namespace std;
 int main()
 {
 
-    std::array<HR::Employee, 3> employees;
+    std::vector<HR::Employee> employees;
 
-    employees[0] = HR::Employee{
+    HR::Employee employee_0{
         .firstname = 'J',  // Single character literal for char field
         .lastname = 'D',   // Single character literal for char field
         .employeeNumber = 1,
         .salary = 50000,
         .empRang = HR::title::Manager
     };
+    employees.push_back(employee_0);
 
 
-    employees[1] = HR::Employee{
+    HR::Employee employee_1{
         .firstname = 'A',  // Single character literal for char field
         .lastname = 'B',   // Single character literal for char field
         .employeeNumber = 2,
         .salary = 60000,
         .empRang = HR::title::Senior
     };
+    employees.push_back(employee_1);
 
-    employees[2] = HR::Employee{
+    HR::Employee employee_2{
         .firstname = 'C',  // Single character literal for char field
         .lastname = 'E',   // Single character literal for char field
         .employeeNumber = 3,
         .salary = 70000,
         .empRang = HR::title::Junior
     };
-   
-
-
+    employees.push_back(employee_2);
 
     for (const auto& emp : employees) {
         Print(emp);
