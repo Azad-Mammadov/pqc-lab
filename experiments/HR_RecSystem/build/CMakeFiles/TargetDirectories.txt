@@ -1,0 +1,4 @@
+C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem/build/CMakeFiles/DB_lib.dir
+C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem/build/CMakeFiles/DB_test.dir
+C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem/build/CMakeFiles/ZERO_CHECK.dir

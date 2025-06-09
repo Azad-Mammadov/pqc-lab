@@ -1,0 +1,10 @@
+^C:\USERS\AZADMAMMADOV\DOCUMENTS\GITHUB\PQC-LAB\EXPERIMENTS\HR_RECSYSTEM\BUILD\CMAKEFILES\310DF83F5A1ED4F39C117BDB16358F8F\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem -BC:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/AzadMammadov/Documents/GitHub/pqc-lab/experiments/HR_RecSystem/build/EmployeeRecSystem.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

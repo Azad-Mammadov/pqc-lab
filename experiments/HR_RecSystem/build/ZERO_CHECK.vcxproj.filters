@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\build\CMakeFiles\310df83f5a1ed4f39c117bdb16358f8f\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{25B2C5A2-CEA5-300A-A202-3AF670C69309}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
