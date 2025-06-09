@@ -1,0 +1,22 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "DB_lib.dir\\Debug\\array_UY3GITVBJW9S3KDD.obj",
+            "outputs": [
+                "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\HR_RecSystem\\build\\Debug\\DB_lib.pdb",
+                "DB_lib.dir\\Debug\\array_UY3GITVBJW9S3KDD.module.json",
+                "DB_lib.dir\\Debug\\array_UY3GITVBJW9S3KDD.ifc"
+            ],
+            "provides": [
+                {
+                    "logical-name": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\array",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\array",
+                    "lookup-method": "absolute"
+                }
+            ],
+            "requires": []
+        }
+    ]
+}

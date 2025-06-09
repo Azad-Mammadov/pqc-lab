@@ -4,6 +4,7 @@ export module employee;
 
 import <iostream>;
 import <string>;
+import <array>;
 
 //import <vector>;
 //import <stdexcept>;
@@ -19,6 +20,8 @@ namespace HR
         Manager,
         Director
     };
+
+
     export struct Employee {
         char firstname;
         char lastname;
