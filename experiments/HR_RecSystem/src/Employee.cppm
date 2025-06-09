@@ -12,13 +12,31 @@ import <string>;
 
 namespace HR 
 {
+    export enum class title {
+        Intern,
+        Junior,
+        Senior,
+        Manager,
+        Director
+    };
     export struct Employee {
         char firstname;
         char lastname;
         int employeeNumber;
         int salary;
+        title empRang;
     };
+
 } // namespace HR
+
+
+
+
+
+
+
+
+
 
     // namespace Records 
     // {
