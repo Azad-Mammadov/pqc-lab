@@ -13,7 +13,16 @@ int main()
 
     const double cost {myTicket.calculatePriceInDollars()};
     std::cout << "This ticket will cost $" << cost <<"\n";
-    std::cout << "Frequent Flyer Number: " << myTicket.getFrequentFlyerNumber() << "\n";
+
+    if (auto ffn = myTicket.getFrequentFlyerNumber(); ffn.has_value())
+    {
+        std::cout << "Frequent Flyer Number: " << ffn.value() << "\n";
+    }
+    else
+    {
+        std::cout << "No Frequent Flyer Number provided.\n";
+    }
+    //std::cout << "Frequent Flyer Number: " << myTicket.getFrequentFlyerNumber() << "\n";
 
     return 0;
 }

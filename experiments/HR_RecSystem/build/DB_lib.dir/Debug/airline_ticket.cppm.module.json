@@ -28,6 +28,12 @@
                     "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\string",
                     "lookup-method": "include-angle",
                     "unique-on-source-path": true
+                },
+                {
+                    "logical-name": "optional",
+                    "source-path": "c:\\program files\\microsoft visual studio\\2022\\community\\vc\\tools\\msvc\\14.44.35207\\include\\optional",
+                    "lookup-method": "include-angle",
+                    "unique-on-source-path": true
                 }
             ]
         }

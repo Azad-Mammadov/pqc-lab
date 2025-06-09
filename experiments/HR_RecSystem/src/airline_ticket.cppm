@@ -70,7 +70,7 @@ void AirLine::AirlineTicket::setEliteSuperRewardsStatus(bool status)
     m_hasEliteSuperRewardsStatus = status;
 }
 
-std::string AirLine::AirlineTicket::getFrequentFlyerNumber() const
+std::optional<std::string> AirLine::AirlineTicket::getFrequentFlyerNumber() const
 {
     return m_frequentFlyerNumber;
 }
