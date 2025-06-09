@@ -23,8 +23,8 @@ namespace HR
 
 
     export struct Employee {
-        char firstname;
-        char lastname;
+        std::string firstname;
+        std::string lastname;
         int employeeNumber;
         int salary;
         title empRang;

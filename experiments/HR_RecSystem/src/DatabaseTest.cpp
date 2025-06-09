@@ -44,8 +44,8 @@ int main()
     std::vector<HR::Employee> employees;
 
     HR::Employee employee_0{
-        .firstname = 'J',  // Single character literal for char field
-        .lastname = 'D',   // Single character literal for char field
+        .firstname = "Joe",  // Single character literal for char field
+        .lastname = "Lee",   // Single character literal for char field
         .employeeNumber = 1,
         .salary = 50000,
         .empRang = HR::title::Manager
@@ -54,8 +54,8 @@ int main()
 
 
     HR::Employee employee_1{
-        .firstname = 'A',  // Single character literal for char field
-        .lastname = 'B',   // Single character literal for char field
+        .firstname = "Abram",  // Single character literal for char field
+        .lastname = "Lincoln",   // Single character literal for char field
         .employeeNumber = 2,
         .salary = 60000,
         .empRang = HR::title::Senior
@@ -63,8 +63,8 @@ int main()
     employees.push_back(employee_1);
 
     HR::Employee employee_2{
-        .firstname = 'C',  // Single character literal for char field
-        .lastname = 'E',   // Single character literal for char field
+        .firstname = "Credo",  // Single character literal for char field
+        .lastname = "Evans",   // Single character literal for char field
         .employeeNumber = 3,
         .salary = 70000,
         .empRang = HR::title::Junior
