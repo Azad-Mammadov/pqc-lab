@@ -3,6 +3,7 @@ export module airline_ticket;
 
 import <iostream>;
 import <string>;
+import <optional>;
 
 namespace AirLine
 {
@@ -16,11 +17,14 @@ namespace AirLine
             void setNumberOfMiles(int miles);
             bool hasEliteSuperRewardsStatus();
             void setEliteSuperRewardsStatus(bool status);
+            std::optional<std::string> getFrequentFlyerNumber() const;
+            void setFrequentFlyerNumber(const std::string& number);
 
         private:
             std::string m_passengerName{"Unknown Passenger"};
             int m_numberOfMiles{0};
             bool m_hasEliteSuperRewardsStatus{false};
+            std::optional<std::string> m_frequentFlyerNumber{"None"};
     };
 } // namespace AirLine
 
@@ -66,3 +70,12 @@ void AirLine::AirlineTicket::setEliteSuperRewardsStatus(bool status)
     m_hasEliteSuperRewardsStatus = status;
 }
 
+std::string AirLine::AirlineTicket::getFrequentFlyerNumber() const
+{
+    return m_frequentFlyerNumber;
+}
+
+void AirLine::AirlineTicket::setFrequentFlyerNumber(const std::string& number)
+{
+    m_frequentFlyerNumber = number;
+}
