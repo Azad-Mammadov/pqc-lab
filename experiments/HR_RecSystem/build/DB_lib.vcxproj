@@ -272,7 +272,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\Employee.cppm" />
+    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\airline_ticket.cppm" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

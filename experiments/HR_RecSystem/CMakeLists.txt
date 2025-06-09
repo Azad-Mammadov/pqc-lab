@@ -19,7 +19,7 @@ add_library(DB_lib
     #src/Database.cpp
     #src/Database.cppm
     #src/Employee.cpp
-    src/Employee.cppm
+    src/airline_ticket.cppm
 )
 
 # Configure module compilation for DB_lib
@@ -29,7 +29,7 @@ target_compile_options(DB_lib PRIVATE
 
 # Add the test executable
 add_executable(DB_test
-    src/DatabaseTest.cpp
+    src/AirLine_Test.cpp
 )
 
 target_link_libraries(DB_test PRIVATE DB_lib)

@@ -320,7 +320,7 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\DatabaseTest.cpp" />
+    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\AirLine_Test.cpp" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
