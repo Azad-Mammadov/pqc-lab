@@ -3,11 +3,11 @@
     "revision": 0,
     "rules": [
         {
-            "primary-output": "DB_lib.dir\\Debug\\optional_13ASZLSYS4N2M82Z.obj",
+            "primary-output": "DB_lib.dir\\Debug\\src\\optional_13ASZLSYS4N2M82Z.obj",
             "outputs": [
                 "C:\\Users\\AzadMammadov\\Documents\\GitHub\\pqc-lab\\experiments\\HR_RecSystem\\build\\Debug\\DB_lib.pdb",
-                "DB_lib.dir\\Debug\\optional_13ASZLSYS4N2M82Z.module.json",
-                "DB_lib.dir\\Debug\\optional_13ASZLSYS4N2M82Z.ifc"
+                "DB_lib.dir\\Debug\\src\\optional_13ASZLSYS4N2M82Z.module.json",
+                "DB_lib.dir\\Debug\\src\\optional_13ASZLSYS4N2M82Z.ifc"
             ],
             "provides": [
                 {

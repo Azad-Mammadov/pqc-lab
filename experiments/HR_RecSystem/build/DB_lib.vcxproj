@@ -272,7 +272,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\airline_ticket.cppm" />
+    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\airline_ticket.cpp">
+      <ObjectFileName>$(IntDir)/src/airline_ticket.cpp.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="C:\Users\AzadMammadov\Documents\GitHub\pqc-lab\experiments\HR_RecSystem\src\airline_ticket.cppm">
+      <ObjectFileName>$(IntDir)/src/airline_ticket.cppm.obj</ObjectFileName>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
